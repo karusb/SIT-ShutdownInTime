@@ -71,7 +71,7 @@ namespace ShutdownInTime
                 seconds = (mins * 60);
             }
             //RemainingLabel.Text = hours.ToString() + " : " + mins.ToString();
-            string command = "shutdown /s /f /t " + seconds.ToString();
+            string command = "shutdown /s /t " + seconds.ToString();
             ExecuteCommandSync(command);
             timer.Tick += new EventHandler(timer_Tick);
             timer.Start();
